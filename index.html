@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lisseth Vivanco-Cordova | Data Analyst</title>
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #222;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 1.25rem;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .hero {
+      margin-bottom: 40px;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+    }
+
+    .buttons a {
+      display: inline-block;
+      margin-right: 10px;
+      margin-top: 10px;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .btn-secondary {
+      background: #eaeaea;
+      color: #111;
+    }
+
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 10px;
+      margin-top: 24px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    ul {
+      padding-left: 20px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .links {
+      margin-top: 18px;
+    }
+
+    .links a {
+      margin-right: 12px;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #777;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Lisseth Vivanco-Cordova</h1>
+      <p><strong>Business Data Analyst</strong></p>
+
+      <p>
+        I transform messy data into structured datasets, clear dashboards,
+        and insights that support business decisions.
+      </p>
+
+      <div class="buttons">
+        <a href="https://github.com/Lissviva" target="_blank" class="btn-secondary">GitHub</a>
+        <a href="https://www.linkedin.com/in/lisseth-vivanco-cordova/" target="_blank" class="btn-secondary">LinkedIn</a>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+      <h2>Projects</h2>
+
+      <!-- Project 1 -->
+      <div class="card">
+        <h3>Pricing &amp; Profitability Analysis – Retail Dataset</h3>
+
+        <p><strong>Problem:</strong></p>
+        <p>
+          The business lacked visibility on how discount strategies impact profitability and sales performance.
+        </p>
+
+        <p><strong>What I did:</strong></p>
+        <ul>
+          <li>Analysed relationships between sales, profit, and discounts</li>
+          <li>Identified unprofitable products and categories</li>
+          <li>Compared performance across categories and time</li>
+          <li>Built visualisations to explore pricing patterns</li>
+          <li>Developed an interactive dashboard</li>
+        </ul>
+
+        <p><strong>Key Insights:</strong></p>
+        <ul>
+          <li>High discounts often reduce profit margins</li>
+          <li>Furniture category shows frequent negative profit</li>
+          <li>Sales do not always increase with higher discounts</li>
+          <li>Discount strategies are often inefficient or misaligned</li>
+        </ul>
+
+        <p><strong>Tools:</strong></p>
+        <p>Python, pandas, scikit-learn, Power BI</p>
+
+        <p><strong>Result:</strong></p>
+        <ul>
+          <li>Identified profit leakage caused by discounting</li>
+          <li>Provided recommendations to optimise pricing strategy</li>
+          <li>Enabled better decision-making on discounts and margins</li>
+        </ul>
+
+        <div class="links">
+          <a href="https://github.com/Lissviva/SuperstoreDataProject" target="_blank">GitHub</a>
+          <a href="https://drive.google.com/file/d/1vT7vb4mnHqUtTkfJUHM1W4Sc0BjbpWPM/view?usp=sharing" target="_blank">Power BI PDF</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="card">
+        <h3>Crime Risk Analysis &amp; Prediction – Ipswich (UK)</h3>
+
+        <p><strong>Problem:</strong></p>
+        <p>
+          Crime data from multiple years was inconsistent and difficult to analyse, limiting the ability to identify trends, high-risk areas, and support decision-making for local authorities.
+        </p>
+
+        <p><strong>What I did:</strong></p>
+        <ul>
+          <li>Cleaned and merged multi-year crime datasets (2022–2024)</li>
+          <li>Removed missing values, duplicates, and geographic outliers</li>
+          <li>Applied reverse geocoding to improve location accuracy</li>
+          <li>Engineered time-based features (year, month, seasonality)</li>
+          <li>Enriched data with socio-economic indicators (employment, activity rates)</li>
+          <li>Performed EDA to identify temporal and spatial patterns</li>
+          <li>Applied clustering (K-Means, DBSCAN) to detect crime zones</li>
+          <li>Built a Random Forest model to predict crime types</li>
+          <li>Developed an interactive dashboard using Streamlit</li>
+        </ul>
+
+        <p><strong>Key Insights:</strong></p>
+        <ul>
+          <li>Crime peaks consistently in July and December (seasonality)</li>
+          <li>Violence &amp; sexual offences are the most frequent crimes</li>
+          <li>Specific streets (e.g. Dogs Head Street, Lloyds Avenue) are high-risk hotspots</li>
+          <li>Many crimes result in “no suspect identified” outcomes</li>
+          <li>Socio-economic variables showed weak correlation with crime levels</li>
+          <li>Clustering revealed distinct crime zones (e.g. low crime vs shoplifting areas)</li>
+        </ul>
+
+        <p><strong>Tools:</strong></p>
+        <p>Python, pandas, scikit-learn, Plotly, Folium, Streamlit, Power Query</p>
+
+        <p><strong>Result:</strong></p>
+        <ul>
+          <li>Identified crime hotspots and seasonal patterns</li>
+          <li>Built a predictive model (46–48% accuracy, F1 = 0.39)</li>
+          <li>Delivered an interactive dashboard for exploring trends and predictions</li>
+          <li>Enabled data-driven insights for local crime prevention strategies</li>
+        </ul>
+
+        <div class="links">
+          <a href="https://github.com/Lissviva/CrimeData" target="_blank">GitHub</a>
+          <a href="https://crimedata-4zcadzum5tnfluezvl2xz4.streamlit.app/" target="_blank">Live App</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:LissethVivanco98@gmail.com">LissethVivanco98@gmail.com</a></p>
+    </section>
+
+    <footer>
+      © 2026 Lisseth Vivanco-Cordova
+    </footer>
+
+  </div>
+
+</body>
+</html>
