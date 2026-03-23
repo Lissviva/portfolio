@@ -2,227 +2,384 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lisseth Vivanco-Cordova | Data Analyst</title>
-
   <style>
+    :root {
+      --bg: #f7f7f5;
+      --card: #ffffff;
+      --text: #1f1f1f;
+      --muted: #666;
+      --line: #e9e7e2;
+      --pill: #f0ede6;
+      --soft: #faf8f3;
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
       margin: 0;
-      background: #f9f9f9;
-      color: #222;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
     }
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
     }
 
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 5px;
-    }
-
-    h2 {
-      margin-top: 40px;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 8px;
-    }
-
-    h3 {
-      margin-top: 0;
-      margin-bottom: 14px;
-      font-size: 1.25rem;
-    }
-
-    p {
-      color: #555;
-      line-height: 1.6;
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
     }
 
     .hero {
-      margin-bottom: 40px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 22px;
+      align-items: stretch;
     }
 
-    .hero p {
-      font-size: 1.05rem;
+    .hero-main {
+      padding: 34px;
     }
 
-    .buttons a {
+    .hero-side {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .eyebrow {
       display: inline-block;
-      margin-right: 10px;
-      margin-top: 10px;
-      padding: 10px 16px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--pill);
+      color: #4d4d4d;
+      font-size: 14px;
+      margin-bottom: 18px;
     }
 
-    .btn-secondary {
-      background: #eaeaea;
-      color: #111;
+    h1 {
+      margin: 0 0 8px;
+      font-size: 46px;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .subtitle {
+      font-size: 19px;
+      color: #333;
+      margin: 0 0 14px;
+      font-weight: 600;
+    }
+
+    .hero p,
+    .contact p,
+    .project-intro {
+      color: var(--muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .actions {
+      margin-top: 22px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      color: var(--text);
+      background: #fff;
+      font-weight: 600;
+    }
+
+    .btn.primary {
+      background: #171717;
+      color: #fff;
+      border-color: #171717;
+    }
+
+    .mini-label {
+      font-size: 13px;
+      color: #777;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .stat {
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 28px;
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      margin: 34px 0 16px;
+      font-size: 24px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
     }
 
     .card {
-      background: white;
       padding: 24px;
-      border-radius: 10px;
-      margin-top: 24px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--pill);
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .problem {
+      color: #444;
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+
+    .project-blocks {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .project-box {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px 18px;
+    }
+
+    .project-box h3 {
+      margin: 0 0 10px;
+      font-size: 15px;
+      color: #222;
     }
 
     ul {
-      padding-left: 20px;
-      color: #555;
-      line-height: 1.6;
+      margin: 0 0 0 18px;
+      padding: 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .tools {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      color: #444;
+      font-size: 14px;
     }
 
     .links {
       margin-top: 18px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
     .links a {
-      margin-right: 12px;
-      font-size: 0.95rem;
+      color: #111;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .contact {
+      margin-top: 30px;
+      padding: 22px 24px;
     }
 
     footer {
       text-align: center;
-      margin-top: 40px;
-      color: #777;
-      font-size: 0.9rem;
+      color: #8a8a8a;
+      margin-top: 24px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 860px) {
+      .hero,
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
     }
   </style>
 </head>
-
 <body>
+  <div class="wrap">
 
-  <div class="container">
-
-    <!-- HERO -->
     <section class="hero">
-      <h1>Lisseth Vivanco-Cordova</h1>
-      <p><strong>Business Data Analyst</strong></p>
+      <div class="panel hero-main">
+        <div class="eyebrow">Portfolio</div>
+        <h1>Lisseth Vivanco-Cordova</h1>
+        <div class="subtitle">Business Data Analyst</div>
+        <p>
+          I transform messy data into structured datasets, clear dashboards, and insights that support business decisions.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="https://github.com/Lissviva" target="_blank">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/lisseth-vivanco-cordova/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
 
-      <p>
-        I transform messy data into structured datasets, clear dashboards,
-        and insights that support business decisions.
-      </p>
+      <div class="panel hero-side">
+        <div>
+          <div class="mini-label">Focus</div>
+          <p class="project-intro">
+            Pricing, profitability, predictive analytics, geospatial analysis, dashboards, and business storytelling.
+          </p>
+        </div>
 
-      <div class="buttons">
-        <a href="https://github.com/Lissviva" target="_blank" class="btn-secondary">GitHub</a>
-        <a href="https://www.linkedin.com/in/lisseth-vivanco-cordova/" target="_blank" class="btn-secondary">LinkedIn</a>
+        <div class="stat">
+          <div class="mini-label">Projects shown</div>
+          <strong>2</strong>
+          <span>Retail pricing and crime risk analytics</span>
+        </div>
+
+        <div class="stat">
+          <div class="mini-label">Main tools</div>
+          <strong>Python + BI</strong>
+          <span>pandas, Power BI, Streamlit, scikit-learn</span>
+        </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section>
-      <h2>Projects</h2>
+    <h3 class="section-title">Selected Projects</h3>
+
+    <section class="projects">
 
       <!-- Project 1 -->
-      <div class="card">
-        <h3>Pricing &amp; Profitability Analysis – Retail Dataset</h3>
+      <article class="panel card">
+        <div class="tag">Retail Analytics</div>
+        <h2>Pricing &amp; Profitability Analysis</h2>
 
-        <p><strong>Problem:</strong></p>
-        <p>
-          The business lacked visibility on how discount strategies impact profitability and sales performance.
+        <p class="problem">
+          <strong>Problem:</strong> The business lacked visibility on how discount strategies impact profitability and sales performance.
         </p>
 
-        <p><strong>What I did:</strong></p>
-        <ul>
-          <li>Analysed relationships between sales, profit, and discounts</li>
-          <li>Identified unprofitable products and categories</li>
-          <li>Compared performance across categories and time</li>
-          <li>Built visualisations to explore pricing patterns</li>
-          <li>Developed an interactive dashboard</li>
-        </ul>
+        <div class="project-blocks">
+          <div class="project-box">
+            <h3>What I did</h3>
+            <ul>
+              <li>Analysed relationships between sales, profit, and discounts</li>
+              <li>Identified unprofitable products and categories</li>
+              <li>Compared performance across categories and time</li>
+              <li>Built visualisations to explore pricing patterns</li>
+              <li>Developed an interactive dashboard</li>
+            </ul>
+          </div>
 
-        <p><strong>Key Insights:</strong></p>
-        <ul>
-          <li>High discounts often reduce profit margins</li>
-          <li>Furniture category shows frequent negative profit</li>
-          <li>Sales do not always increase with higher discounts</li>
-          <li>Discount strategies are often inefficient or misaligned</li>
-        </ul>
+          <div class="project-box">
+            <h3>Result</h3>
+            <ul>
+              <li>Found that high discounts often reduce profit margins</li>
+              <li>Showed that sales do not always increase with higher discounts</li>
+              <li>Identified profit leakage caused by discounting</li>
+              <li>Provided recommendations to optimise pricing strategy</li>
+              <li>Enabled better decision-making on discounts and margins</li>
+            </ul>
+          </div>
+        </div>
 
-        <p><strong>Tools:</strong></p>
-        <p>Python, pandas, scikit-learn, Power BI</p>
-
-        <p><strong>Result:</strong></p>
-        <ul>
-          <li>Identified profit leakage caused by discounting</li>
-          <li>Provided recommendations to optimise pricing strategy</li>
-          <li>Enabled better decision-making on discounts and margins</li>
-        </ul>
+        <div class="tools">
+          <strong>Tools:</strong> Python, pandas, scikit-learn, Power BI
+        </div>
 
         <div class="links">
           <a href="https://github.com/Lissviva/SuperstoreDataProject" target="_blank">GitHub</a>
           <a href="https://drive.google.com/file/d/1vT7vb4mnHqUtTkfJUHM1W4Sc0BjbpWPM/view?usp=sharing" target="_blank">Power BI PDF</a>
         </div>
-      </div>
+      </article>
 
       <!-- Project 2 -->
-      <div class="card">
-        <h3>Crime Risk Analysis &amp; Prediction – Ipswich (UK)</h3>
+      <article class="panel card">
+        <div class="tag">Predictive Analytics</div>
+        <h2>Crime Risk Analysis &amp; Prediction</h2>
 
-        <p><strong>Problem:</strong></p>
-        <p>
-          Crime data from multiple years was inconsistent and difficult to analyse, limiting the ability to identify trends, high-risk areas, and support decision-making for local authorities.
+        <p class="problem">
+          <strong>Problem:</strong> Crime data from multiple years was inconsistent and difficult to analyse, limiting the ability to identify trends, high-risk areas, and support decision-making for local authorities.
         </p>
 
-        <p><strong>What I did:</strong></p>
-        <ul>
-          <li>Cleaned and merged multi-year crime datasets (2022–2024)</li>
-          <li>Removed missing values, duplicates, and geographic outliers</li>
-          <li>Applied reverse geocoding to improve location accuracy</li>
-          <li>Engineered time-based features (year, month, seasonality)</li>
-          <li>Enriched data with socio-economic indicators (employment, activity rates)</li>
-          <li>Performed EDA to identify temporal and spatial patterns</li>
-          <li>Applied clustering (K-Means, DBSCAN) to detect crime zones</li>
-          <li>Built a Random Forest model to predict crime types</li>
-          <li>Developed an interactive dashboard using Streamlit</li>
-        </ul>
+        <div class="project-blocks">
+          <div class="project-box">
+            <h3>What I did</h3>
+            <ul>
+              <li>Cleaned and merged multi-year crime datasets (2022–2024)</li>
+              <li>Removed missing values, duplicates, and geographic outliers</li>
+              <li>Applied reverse geocoding to improve location accuracy</li>
+              <li>Engineered time-based features and enriched data with socio-economic indicators</li>
+              <li>Performed EDA and clustering to detect crime zones</li>
+              <li>Built a Random Forest model and interactive Streamlit dashboard</li>
+            </ul>
+          </div>
 
-        <p><strong>Key Insights:</strong></p>
-        <ul>
-          <li>Crime peaks consistently in July and December (seasonality)</li>
-          <li>Violence &amp; sexual offences are the most frequent crimes</li>
-          <li>Specific streets (e.g. Dogs Head Street, Lloyds Avenue) are high-risk hotspots</li>
-          <li>Many crimes result in “no suspect identified” outcomes</li>
-          <li>Socio-economic variables showed weak correlation with crime levels</li>
-          <li>Clustering revealed distinct crime zones (e.g. low crime vs shoplifting areas)</li>
-        </ul>
+          <div class="project-box">
+            <h3>Result</h3>
+            <ul>
+              <li>Identified seasonal peaks in July and December</li>
+              <li>Highlighted hotspots such as Dogs Head Street and Lloyds Avenue</li>
+              <li>Showed that violence &amp; sexual offences were the most frequent crimes</li>
+              <li>Built a predictive model with 46–48% accuracy and F1 = 0.39</li>
+              <li>Delivered data-driven insights for local crime prevention strategies</li>
+            </ul>
+          </div>
+        </div>
 
-        <p><strong>Tools:</strong></p>
-        <p>Python, pandas, scikit-learn, Plotly, Folium, Streamlit, Power Query</p>
-
-        <p><strong>Result:</strong></p>
-        <ul>
-          <li>Identified crime hotspots and seasonal patterns</li>
-          <li>Built a predictive model (46–48% accuracy, F1 = 0.39)</li>
-          <li>Delivered an interactive dashboard for exploring trends and predictions</li>
-          <li>Enabled data-driven insights for local crime prevention strategies</li>
-        </ul>
+        <div class="tools">
+          <strong>Tools:</strong> Python, pandas, scikit-learn, Plotly, Folium, Streamlit, Power Query
+        </div>
 
         <div class="links">
           <a href="https://github.com/Lissviva/CrimeData" target="_blank">GitHub</a>
           <a href="https://crimedata-4zcadzum5tnfluezvl2xz4.streamlit.app/" target="_blank">Live App</a>
         </div>
-      </div>
+      </article>
+
     </section>
 
-    <!-- CONTACT -->
-    <section>
-      <h2>Contact</h2>
+    <section class="panel contact">
+      <h3 style="margin: 0 0 10px;">Contact</h3>
       <p>Email: <a href="mailto:LissethVivanco98@gmail.com">LissethVivanco98@gmail.com</a></p>
     </section>
 
-    <footer>
-      © 2026 Lisseth Vivanco-Cordova
-    </footer>
-
+    <footer>© 2026 Lisseth Vivanco-Cordova</footer>
   </div>
-
 </body>
 </html>
