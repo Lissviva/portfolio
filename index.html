@@ -106,6 +106,11 @@
       color: var(--text);
       background: #fff;
       font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
     }
 
     .btn.primary {
@@ -205,17 +210,37 @@
       font-size: 14px;
     }
 
-    .links {
-      margin-top: 18px;
+    .cta-buttons {
+      margin-top: 20px;
       display: flex;
-      gap: 14px;
+      gap: 12px;
       flex-wrap: wrap;
     }
 
-    .links a {
-      color: #111;
-      font-weight: 600;
+    .cta-btn {
       text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 14px;
+      display: inline-block;
+      transition: 0.2s ease;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .cta-primary {
+      background: #171717;
+      color: white;
+      border: 1px solid #171717;
+    }
+
+    .cta-secondary {
+      border: 1px solid #dcdcdc;
+      color: #111;
+      background: white;
     }
 
     .contact {
@@ -322,9 +347,13 @@
           <strong>Tools:</strong> Python, pandas, scikit-learn, Power BI
         </div>
 
-        <div class="links">
-          <a href="https://github.com/Lissviva/SuperstoreDataProject" target="_blank">GitHub</a>
-          <a href="https://drive.google.com/file/d/1vT7vb4mnHqUtTkfJUHM1W4Sc0BjbpWPM/view?usp=sharing" target="_blank">Power BI PDF</a>
+        <div class="cta-buttons">
+          <a href="https://github.com/Lissviva/SuperstoreDataProject" target="_blank" class="cta-btn cta-primary">
+            View GitHub
+          </a>
+          <a href="https://drive.google.com/file/d/1vT7vb4mnHqUtTkfJUHM1W4Sc0BjbpWPM/view?usp=sharing" target="_blank" class="cta-btn cta-secondary">
+            View Power BI PDF
+          </a>
         </div>
       </article>
 
@@ -366,9 +395,13 @@
           <strong>Tools:</strong> Python, pandas, scikit-learn, Plotly, Folium, Streamlit, Power Query
         </div>
 
-        <div class="links">
-          <a href="https://github.com/Lissviva/CrimeData" target="_blank">GitHub</a>
-          <a href="https://crimedata-4zcadzum5tnfluezvl2xz4.streamlit.app/" target="_blank">Live App</a>
+        <div class="cta-buttons">
+          <a href="https://github.com/Lissviva/CrimeData" target="_blank" class="cta-btn cta-primary">
+            View GitHub
+          </a>
+          <a href="https://crimedata-4zcadzum5tnfluezvl2xz4.streamlit.app/" target="_blank" class="cta-btn cta-secondary">
+            Open Live App
+          </a>
         </div>
       </article>
 
